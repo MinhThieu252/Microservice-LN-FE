@@ -10,7 +10,7 @@
     </div>
     <div class="form-container sign-in-container">
         <form action="#">
-            <h1>Đăng Nhập</h1>
+            <h1>Login</h1>
             <input type="text" placeholder="Tên Tài Khoản" [(ngModel)]="loginForm.username" name="username" />
             <input type="password" placeholder="Mật Khẩu" [(ngModel)]="loginForm.password" name="password" />
             <a href="javascript:void(0)">Quên mật khẩu ?</a>
@@ -25,8 +25,8 @@
                 <button class="ghost" id="signIn" (click)="loginFormChange()">Đăng Nhập</button>
             </div>
             <div class="overlay-panel overlay-right">
-                <h1>Đăng Ký Ngay</h1>
-                <p>Giao Diện Thân Tiện Khó Sài</p>
+                <h1>Register</h1>
+                <!-- <p>Giao Diện Thân Tiện Khó Sài</p> -->
                 <button class="ghost" id="signUp" (click)="registerFormChange()">Đăng Ký</button>
             </div>
         </div>

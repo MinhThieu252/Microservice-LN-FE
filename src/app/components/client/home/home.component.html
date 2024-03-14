@@ -12,10 +12,10 @@
             <div class="col-lg-9">
                 <div class="hero__item set-bg right" [ngStyle]="{backgroundImage:'url(assets/image/banner.png'}">
                     <div class="hero__text">
-                        <span>Sinh Nhật SHOP</span>
+                        <span>SOUVENIR SHOP</span>
                         <h2>Giá rẻ <br />bất ngờ</h2>
                         <p>Nhận và giao hàng miễn phí</p>
-                        <a href="javascript:void(0)" class="primary-btn">SHOP NOW</a>
+                        <a href="javascript:void(0)" routerLink="/" class="primary-btn">SHOP NOW</a>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,8 @@
 <section class="categories">
     <div class="container">
         <div class="row">
-            <p-carousel [value]="category_items" [numScroll]="1" [numVisible]="4" [circular]="true" [showIndicators]="false" [autoplayInterval]="4000">
+            <p-carousel [value]="category_items" [numScroll]="1" [numVisible]="4" [circular]="true"
+                [showIndicators]="false" [autoplayInterval]="4000">
                 <ng-template let-item pTemplate="item">
                     <div class="col">
                         <div class="categories__item set-bg" [ngStyle]="{'background-image': 'url('+ item.src +')'}">
@@ -55,7 +56,8 @@
         <div class="row featured__filter">
             <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let product of listProductNewest">
                 <div class="featured__item">
-                    <div class="featured__item__pic set-bg" [ngStyle]="{'background-image': 'url(data:image/jpeg;base64,'+ product.images[0].data+')'}">
+                    <div class="featured__item__pic set-bg"
+                        [ngStyle]="{'background-image': 'url(data:image/jpeg;base64,'+ product.images[0].data+')'}">
                         <ul class="featured__item__pic__hover">
                             <li>
                                 <a href="javascript:void(0)" (click)="addToWishList(product)">
@@ -120,7 +122,8 @@
         <div class="row featured__filter">
             <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let product of listProductPrice">
                 <div class="featured__item">
-                    <div class="featured__item__pic set-bg" [ngStyle]="{'background-image': 'url(data:image/jpeg;base64,'+ product.images[0].data+')'}">
+                    <div class="featured__item__pic set-bg"
+                        [ngStyle]="{'background-image': 'url(data:image/jpeg;base64,'+ product.images[0].data+')'}">
                         <ul class="featured__item__pic__hover">
                             <li>
                                 <a href="javascript:void(0)" (click)="addToWishList(product)">
@@ -130,7 +133,7 @@
                             <li>
                                 <a href="javascript:void(0)" routerLink="/product/{{product.id}}">
                                     <fa-icon [icon]="eye"></fa-icon>
-                                    
+
                                 </a>
                             </li>
                             <li>
