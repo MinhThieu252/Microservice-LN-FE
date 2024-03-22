@@ -1,5 +1,9 @@
 <p-toast></p-toast>
 
+<div id="scrollToTopBtn" (click)="scrollToTop()">
+    <img src="assets/image/top.png">
+</div>
+
 <section class="breadcrumb-section set-bg" [ngStyle]="{backgroundImage:'url(assets/image/breadcrumb.jpg'}">
     <div class="container">
         <div class="row">
@@ -53,10 +57,10 @@
                     </div>
                     <a href="javascript:void(0)" class="primary-btn" (click)="addCart(product)">Thêm vào giỏ hàng</a>
                     <ul>
-                        <li><b>Xuất xứ :</b> <span>Việt Nam</span></li>
-                        <li><b>Chất Liệu :</b> <span>Đang cập nhật ! </span></li>
+                        <li><b>Xuất xứ :</b> <div>{{product.made}}</div></li>
+                        <li><b>Chất Liệu :</b> <div>{{product.material}}</div></li>
                         <!-- <samp>Free pickup today</samp> -->
-                        <li><b>Gửi từ :</b> <span>Hà Nội</span></li>
+                        <li><b>Gửi từ :</b> <div>{{product.sent}}</div></li>
                     </ul>
                 </div>
             </div>
