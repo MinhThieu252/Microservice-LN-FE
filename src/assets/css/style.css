@@ -942,7 +942,7 @@ ol {
 
 .featured__item__text h5 {
 	color: #252525;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 /*---------------------
@@ -1746,8 +1746,8 @@ ol {
 	display: inline-block;
 }
 
-.product__details__text ul li span samp {
-	color: #dd2222;
+.product__details__text ul li div {
+	
 }
 
 .product__details__text ul li .share {

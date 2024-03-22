@@ -106,4 +106,11 @@ export class ProductDetailComponent implements OnInit {
   showWarn(text: string) {
     this.messageService.add({severity:'warn', summary: 'Warn', detail: text});
   }
+
+  scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+  }
 }

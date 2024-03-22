@@ -2,9 +2,7 @@
 </p-toast>
 <div id="scrollToTopBtn" (click)="scrollToTop()">
     <img src="assets/image/top.png">
-
 </div>
-
 
 <section>
     <div class="container">
@@ -56,8 +54,8 @@
         <div class="row featured__filter">
             <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let product of listProductNewest">
                 <div class="featured__item">
-                    <div class="featured__item__pic set-bg"
-                        [ngStyle]="{'background-image': 'url(data:image/jpeg;base64,'+ product.images[0].data+')'}">
+                    <div class="featured__item__pic set-bg" style="cursor:pointer"
+                        [ngStyle]="{'background-image': 'url(data:image/jpeg;base64,'+ product.images[0].data+')'}" routerLink="/product/{{product.id}}">
                         <ul class="featured__item__pic__hover">
                             <li>
                                 <a href="javascript:void(0)" (click)="addToWishList(product)">
@@ -77,11 +75,9 @@
                         </ul>
                     </div>
                     <div class="featured__item__text">
-                        <h6><b><a href="javascript:void(0)">{{product.name}}</a></b></h6>
+                        <h6><b><a href="javascript:void(0)" routerLink="/product/{{product.id}}">{{product.name}}</a></b></h6>
                         <!-- Hiển thị giá sản phẩm với định dạng tiền tệ VND -->
-                        <h5 class="red-text">{{ product.price | currency:'VND'}}</h5>
-
-
+                        <h5 class="red-text">{{ product.price | currency:'VND' }}</h5>
                     </div>
                 </div>
             </div>
@@ -122,8 +118,8 @@
         <div class="row featured__filter">
             <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let product of listProductPrice">
                 <div class="featured__item">
-                    <div class="featured__item__pic set-bg"
-                        [ngStyle]="{'background-image': 'url(data:image/jpeg;base64,'+ product.images[0].data+')'}">
+                    <div class="featured__item__pic set-bg" style="cursor:pointer"
+                        [ngStyle]="{'background-image': 'url(data:image/jpeg;base64,'+ product.images[0].data+')'}" routerLink="/product/{{product.id}}">
                         <ul class="featured__item__pic__hover">
                             <li>
                                 <a href="javascript:void(0)" (click)="addToWishList(product)">
@@ -144,7 +140,7 @@
                         </ul>
                     </div>
                     <div class="featured__item__text">
-                        <h6><b><a href="javascript:void(0)">{{product.name}}</a></b></h6>
+                        <h6><b><a href="javascript:void(0)" routerLink="/product/{{product.id}}">{{product.name}}</a></b></h6>
                         <h5 class="red-text">{{ product.price | currency:'VND'}}</h5>
 
 

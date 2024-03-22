@@ -128,16 +128,10 @@ showWarn(text: string) {
 }
 
 
-  scrollToTop() {
-    const scrollDuration = 1000; // Thời gian để cuộn lên (1 giây)
-    const scrollStep = -window.scrollY / (scrollDuration / 15);
-
-    const scrollInterval = setInterval(function() {
-        if (window.scrollY != 0) {
-            window.scrollBy(0, scrollStep);
-        } else {
-            clearInterval(scrollInterval);
-        }
-    }, 15);
-  }
+scrollToTop() {
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+  });
+}
 }
