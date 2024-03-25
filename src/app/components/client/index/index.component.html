@@ -48,8 +48,7 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="header__top__left">
                         <ul>
-                            <!-- <li><i class="fa fa-envelope"></i> thanhtrung3802@gmail.com</li>
-                            <li>Free Ship Khi Đơn Hàng Trên 200k</li> -->
+                            <li class="advertisement">Sản phẩm Chính hãng - Xuất VAT đầy đủ - Giao hàng nhanh - Miễn phí cho đơn hàng trên 300k</li>
                         </ul>
                     </div>
                 </div>
@@ -66,16 +65,7 @@
             <div class="col-lg-6">
                 <nav class="header__menu">
                     <ul>
-
                         <li><a href="javascript:void(0)" routerLink="/">Trang Chủ</a></li>
-                        <!-- <li><a href="javascript:void(0)">Pages</a>
-                            <ul class="header__menu__dropdown">
-                                <li><a href="javascript:void(0)">Shop Details</a></li>
-                                <li><a href="javascript:void(0)">Shoping Cart</a></li>
-                                <li><a href="javascript:void(0)">Check Out</a></li>
-                                <li><a href="javascript:void(0)">Blog Details</a></li>
-                            </ul>
-                        </li> -->
                         <li><a href="javascript:void(0)" routerLink="/blog">Tin Tức</a></li>
                         <li><a href="javascript:void(0)" routerLink="/contact">Liên Hệ</a></li>
                     </ul>
@@ -186,7 +176,7 @@
     <div class="container">
 
 
-        <div class="row">
+        <div class="row">   
             <div class="col-lg-3">
                 <div class="hero__categories">
                     <div class="hero__categories__all" (click)="showDepartmentClick()">
@@ -211,10 +201,11 @@
                     </div>
                     <div class="hero__search__phone">
                         <div class="hero__search__phone__icon">
-                            <fa-icon [icon]="phone"></fa-icon>
+                            <img src="assets/image/ico/phone-call.png" alt="">
                         </div>
                         <div class="hero__search__phone__text">
-                            <h5>+84-999-888-999</h5>
+                            <a href="tel:+84-999-888-999">+84-999-888-999</a>
+                            <br>
                             <span>Support 24/7 </span>
                         </div>
                     </div>
@@ -240,9 +231,11 @@
                         <a href="javascript:void(0)" routerLink="/"><img src="assets/image/logo.png" alt=""></a>
                     </div>
                     <ul>
-                        <li>Address: Trường Đại học Sài Gòn</li>
-                        <li>Phone: +84-999-888-999</li>
-                        <li>Email: 3120411019@sv.sgu.edu.vn</li>
+                        <fa-icon [icon]="home"></fa-icon><a><li>: Trường Đại học Sài Gòn</li></a>
+                        <br>
+                        <fa-icon [icon]="phone"></fa-icon><a href="tel: +84-999-888-999"><li>: +84-999-888-999</li></a>
+                        <br>
+                        <fa-icon [icon]="evelope"></fa-icon><a href="mailto: 3120411019@sv.sgu.edu.vn"><li>: 3120411019@sv.sgu.edu.vn</li></a>
                     </ul>
                 </div>
             </div>
@@ -275,8 +268,8 @@
                         <button type="submit" class="site-btn" routerLink="/login">Đăng Ký</button>
                     </form>
                     <div class="footer__widget__social">
-                        <a href="https://www.facebook.com/TruongDaihocSaiGon.SGU">
-                            <fa-icon [icon]="fb"></fa-icon>
+                        <a href="https://www.facebook.com/TruongDaihocSaiGon.SGU" target="blank">
+                            <img src="assets/image/ico/facebook.png" alt="">
                         </a>
                         <!-- <a href="javascript:void(0)">
                             <fa-icon [icon]="youtube"></fa-icon>
@@ -292,15 +285,7 @@
                 <div class="col-lg-12">
                     <div class="footer__copyright">
                         <div class="footer__copyright__text">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                <!-- Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This
-                                template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a
-                                    href="https://www.facebook.com/trung3802" target="_blank">Thành Trung</a> -->
-                                Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script> All rights reserved
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
+                            <p> &copy; 2024 Team DHT</p>
                         </div>
                         <div class="footer__copyright__payment"><img src="assets/image/payment-item.png" alt=""></div>
                     </div>
