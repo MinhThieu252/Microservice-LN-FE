@@ -45,16 +45,10 @@ export class BlogClientComponent implements OnInit {
     })
   }
   scrollToTop() {
-    const scrollDuration = 1000; // Thời gian để cuộn lên (1 giây)
-    const scrollStep = -window.scrollY / (scrollDuration / 15);
-  
-    const scrollInterval = setInterval(function() {
-        if (window.scrollY != 0) {
-            window.scrollBy(0, scrollStep);
-        } else {
-            clearInterval(scrollInterval);
-        }
-    }, 15);
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
   }
   getListNewest(){
     this.blogService.getListNewest(3).subscribe({
