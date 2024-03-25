@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { faBars, faHeart, faPhone, faRetweet, faShoppingBag, faStar, faStarHalf,faEye } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faHeart, faPhone, faRetweet, faShoppingBag, faStar, faStarHalf,faEye} from '@fortawesome/free-solid-svg-icons';
 import { MessageService } from 'primeng/api';
 import { CartService } from 'src/app/_service/cart.service';
 import { ProductService } from 'src/app/_service/product.service';
@@ -21,7 +21,7 @@ export class ProductDetailComponent implements OnInit {
   star = faStar;
   star_half = faStarHalf;
   retweet = faRetweet;
-  eye=faEye;
+  eye = faEye;
 
   showDepartment = false;
 
@@ -53,9 +53,9 @@ export class ProductDetailComponent implements OnInit {
         console.log(err);
       }
     })
+  
+    
   }
-
-
 
   getListRelatedProduct(){
     this.productService.getListRelatedProduct(this.product.category.id).subscribe({
@@ -67,10 +67,11 @@ export class ProductDetailComponent implements OnInit {
     })
   }
 
-  addToCart(item: any){
+  addToCart(event: Event, item: any){
     this.cartService.getItems();
     this.cartService.addToCart(item,1);
     this.showSuccess("Thêm giỏ hàng thành công!")
+    event.stopPropagation();
 
   }
 
@@ -80,10 +81,11 @@ export class ProductDetailComponent implements OnInit {
     this.showSuccess("Thêm giỏ hàng thành công!");
   }
 
-  addToWishList(item: any){
+  addToWishList(event: Event, item: any){
     if(!this.wishlistService.productInWishList(item)){
       this.wishlistService.addToWishList(item);
       this.showSuccess("Thêm yêu thích thành công!")
+      event.stopPropagation();
     }
   }
 

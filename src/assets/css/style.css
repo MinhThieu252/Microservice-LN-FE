@@ -30,12 +30,11 @@
 /* Template default CSS
 /*----------------------------------------*/
 
-html,
-body {
+html, body {
 	height: 100%;
 	font-family: "Cairo", sans-serif;
 	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
+	margin: 0;
 }
 
 h1,
@@ -129,7 +128,7 @@ ol {
 	right: 0;
 	height: 4px;
 	width: 80px;
-	background: #4a90e2;
+	background: #63d1cd;
 	content: "";
 	margin: 0 auto;
 }
@@ -167,7 +166,7 @@ ol {
 	color: #ffffff;
 	text-transform: uppercase;
 	font-weight: 700;
-	background: #4a90e2;
+	background: #63d1cd;
 	letter-spacing: 2px;
 }
 
@@ -178,7 +177,7 @@ ol {
 	text-transform: uppercase;
 	display: inline-block;
 	padding: 13px 30px 12px;
-	background: #4a90e2;
+	background: #63d1cd;
 	border: none;
 }
 
@@ -255,9 +254,27 @@ ol {
 -----------------------*/
 
 .header__top {
-	background: #f5f5f5;
+	background: #63d1cd;
 }
 
+.advertisement {
+    animation: slide 10s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.header{
+	background-color: #c2fffd;
+
+}
 .header__top__left {
 	padding: 10px 0 13px;
 }
@@ -427,7 +444,7 @@ ol {
 	list-style: none;
 	display: inline-block;
 	margin-right: 50px;
-	position: relative;
+	margin-top: 30px;
 }
 
 .header__menu ul li .header__menu__dropdown {
@@ -453,7 +470,7 @@ ol {
 }
 
 .header__menu ul li .header__menu__dropdown li:hover>a {
-	color: #4a90e2;
+	color: #63d1cd;
 }
 
 .header__menu ul li .header__menu__dropdown li a {
@@ -464,7 +481,7 @@ ol {
 }
 
 .header__menu ul li.active a {
-	color: #4a90e2;
+	color: #63d1cd;
 }
 
 .header__menu ul li:hover .header__menu__dropdown {
@@ -528,7 +545,7 @@ ol {
 .header__cart ul li a span {
 	height: 13px;
 	width: 13px;
-	background: #4a90e2;
+	background: #63d1cd;
 	font-size: 10px;
 	color: #ffffff;
 	line-height: 13px;
@@ -565,15 +582,16 @@ ol {
 
 .hero {
 	padding-bottom: 0px;
+	background-color: #c2fffd;
 }
 
 .hero.hero-normal {
 	padding-bottom: 30px;
 }
 
-/* .hero.hero-normal .hero__categories {
+.hero.hero-normal .hero__categories {
 	position: relative;
-} */
+}
 .hero .hero__categories {
 	position: relative;
 }
@@ -592,7 +610,7 @@ ol {
 }
 
 .hero__categories__all {
-	background: #4a90e2;
+	background: #63d1cd;
 	position: relative;
 	padding: 10px 25px 10px 40px;
 	cursor: pointer;
@@ -615,11 +633,13 @@ ol {
 	top: 100%;
 	width: 100%;
 	border: 1px solid #ebebeb;
-	padding-left: 40px;
+	padding-left: 20px;
+	padding-right:20px;
 	padding-top: 10px;
 	padding-bottom: 12px;
 	background: #ffffff;
 	z-index: 10;
+
 }
 
 .hero__categories ul li {
@@ -631,6 +651,11 @@ ol {
 	color: #1c1c1c;
 	line-height: 39px;
 	display: block;
+}
+.hero__categories ul li a:hover {
+
+    background-color: #abf4df;
+    border-radius: 5px;
 }
 
 .hero__search {
@@ -699,23 +724,30 @@ ol {
 }
 
 .hero__search__phone__icon {
-	font-size: 18px;
-	color: #4a90e2;
-	height: 50px;
-	width: 50px;
-	background: #f5f5f5;
-	line-height: 50px;
-	text-align: center;
-	border-radius: 50%;
-	float: left;
-	margin-right: 20px;
+    height: 50px;
+    width: 50px;
+    background-color: #63d1cd;
+    background-size: cover;
+	background-position: 50%;
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+.hero__search__phone__icon img {
+    display: block;
+    height: 50%;
+	width: 50%;
+	margin-left: 12px;
+	margin-top: 12px;
+	
+	
 }
 
 .hero__search__phone__text {
 	overflow: hidden;
 }
 
-.hero__search__phone__text h5 {
+.hero__search__phone__text a {
 	color: #1c1c1c;
 	font-weight: 700;
 	margin-bottom: 5px;
@@ -738,7 +770,7 @@ ol {
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 4px;
-	color: #4a90e2;
+	color: #63d1cd;
 }
 
 .hero__text h2 {
@@ -840,7 +872,7 @@ ol {
 	bottom: -2px;
 	width: 100%;
 	height: 2px;
-	background: #4a90e2;
+	background: #63d1cd;
 	content: "";
 	opacity: 0;
 }
@@ -890,8 +922,8 @@ ol {
 }
 
 .featured__item__pic__hover li:hover a {
-	background: #4a90e2;
-	border-color: #4a90e2;
+	background: #63d1cd;
+	border-color: #63d1cd;
 }
 
 .featured__item__pic__hover li:hover a fa-icon {
@@ -900,7 +932,7 @@ ol {
 }
 
 .featured__item__pic__hover li a {
-	font-size: 16px;
+	font-size: 20px;
 	color: #1c1c1c;
 	height: 40px;
 	width: 40px;
@@ -915,9 +947,10 @@ ol {
 	-ms-transition: all, 0.5s;
 	-o-transition: all, 0.5s;
 	transition: all, 0.5s;
+
 }
 
-.featured__item__pic__hover li a fa-icon {
+.featured__item__pic__hover li a img {
 	position: relative;
 	transform: rotate(0);
 	-webkit-transition: all, 0.3s;
@@ -925,6 +958,9 @@ ol {
 	-ms-transition: all, 0.3s;
 	-o-transition: all, 0.3s;
 	transition: all, 0.3s;
+	margin-bottom: 5px;
+	width: 50%;
+	height: 50%;
 }
 
 .featured__item__text {
@@ -1041,41 +1077,37 @@ ol {
 -----------------------*/
 
 .breadcrumb-section {
-	display: flex;
-	align-items: center;
-	padding: 45px 0 40px;
+    background-color: #f7f7f7; /* Màu nền của breadcrumbs */
+    padding: 20px 0; /* Khoảng cách giữa breadcrumbs và nội dung xung quanh */
 }
 
 .breadcrumb__text h2 {
-	font-size: 46px;
-	color: #000000;
-	font-weight: 700;
+    margin-bottom: 10px; /* Khoảng cách giữa tiêu đề và breadcrumbs */
+}
+
+.breadcrumb__option {
+    margin-top: 10px; /* Khoảng cách giữa breadcrumbs và nội dung xung quanh */
 }
 
 .breadcrumb__option a {
-	display: inline-block;
-	font-size: 16px;
-	color: #000000;
-	font-weight: 700;
-	margin-right: 20px;
-	position: relative;
+    text-decoration: none; /* Loại bỏ gạch chân từ liên kết */
+    color: #333; /* Màu của liên kết */
 }
 
-.breadcrumb__option a:after {
-	position: absolute;
-	right: -12px;
-	top: 13px;
-	height: 1px;
-	width: 10px;
-	background: #000000;
-	content: "";
+.breadcrumb__option a:hover {
+    color: #007bff; /* Màu của liên kết khi di chuột qua */
 }
 
 .breadcrumb__option span {
-	display: inline-block;
-	font-size: 16px;
-	color: #000000;
+    color: #999; /* Màu của văn bản không phải là liên kết */
 }
+
+.breadcrumb__option span:not(:last-child):after {
+    content: ">"; /* Thêm mũi tên giữa các tab, trừ tab cuối cùng */
+    margin: 0 5px; /* Khoảng cách giữa mũi tên và các tab */
+}
+
+
 
 /*---------------------
   Sidebar
@@ -1326,8 +1358,8 @@ ol {
 }
 
 .product__item__pic__hover li:hover a {
-	background: #4a90e2;
-	border-color: #4a90e2;
+	background: #63d1cd;
+	border-color: #63d1cd;
 }
 
 .product__item__pic__hover li:hover a i {
@@ -1525,7 +1557,7 @@ ol {
 }
 
 .filter__option span:hover {
-	color: #4a90e2;
+	color: #63d1cd;
 }
 
 .product__item {
@@ -1566,8 +1598,8 @@ ol {
 }
 
 .product__item__pic__hover li:hover a {
-	background: #4a90e2;
-	border-color: #4a90e2;
+	background: #63d1cd;
+	border-color: #63d1cd;
 }
 
 .product__item__pic__hover li:hover a i {
@@ -1647,8 +1679,8 @@ ol {
 
 .product__pagination a:hover,
 .blog__pagination a:hover {
-	background: #4a90e2;
-	border-color: #4a90e2;
+	background: #63d1cd;
+	border-color: #63d1cd;
 	color: #ffffff;
 }
 
@@ -1746,9 +1778,9 @@ ol {
 	display: inline-block;
 }
 
-.product__details__text ul li div {
+/* .product__details__text ul li div {
 	
-}
+} */
 
 .product__details__text ul li .share {
 	display: inline-block;
@@ -2156,8 +2188,8 @@ ol {
 }
 
 .checkout__input__checkbox label input:checked~.checkmark {
-	background: #4a90e2;
-	border-color: #4a90e2;
+	background: #63d1cd;
+	border-color: #63d1cd;
 }
 
 .checkout__input__checkbox label input:checked~.checkmark:after {
@@ -2389,7 +2421,7 @@ ol {
 }
 
 .blog__sidebar__item ul li a:hover {
-	color: #4a90e2;
+	color: #63d1cd;
 }
 
 .blog__sidebar__search {
@@ -2609,7 +2641,7 @@ ol {
 }
 
 .blog__details__widget .blog__details__social a:hover {
-	color: #4a90e2;
+	color: #63d1cd;
 }
 
 .blog__details__widget .blog__details__social a:last-child {
@@ -2621,7 +2653,7 @@ ol {
 -----------------------*/
 
 .footer {
-	background: #F3F6FA;
+	background: #c2fffd;
 	padding-top: 70px;
 	padding-bottom: 0;
 }
@@ -2630,12 +2662,15 @@ ol {
 	margin-bottom: 30px;
 }
 
-.footer__about ul li {
+.footer__about fa-icon, .footer__about a, .footer__about li {
 	font-size: 16px;
 	color: #1c1c1c;
 	line-height: 36px;
 	list-style: none;
+	display: inline-block;
 }
+	
+
 
 .footer__about__logo {
 	margin-bottom: 15px;
@@ -2721,13 +2756,27 @@ ol {
 	transition: all, 0.3s;
 	margin-right: 10px;
 }
-
+/* .footer__widget__social {
+    height: 50px;
+    width: 50px;
+    background-color: #63d1cd;
+    background-size: cover;
+	background-position: 50%;
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+} */
+.footer__widget__social img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 .footer__widget .footer__widget__social a:last-child {
 	margin-right: 0;
 }
 
 .footer__widget .footer__widget__social a:hover {
-	background: #4a90e2;
+	background: #63d1cd;
 	color: #ffffff;
 	border-color: #ffffff;
 }
@@ -2765,7 +2814,7 @@ ol {
 
 .contact__widget span {
 	font-size: 36px;
-	color: #4a90e2;
+	color: #63d1cd;
 }
 
 .contact__widget h4 {
@@ -2804,7 +2853,7 @@ ol {
 
 .map .map-inside i {
 	font-size: 48px;
-	color: #4a90e2;
+	color: #63d1cd;
 	position: absolute;
 	bottom: -75px;
 	left: 50%;
@@ -2927,12 +2976,14 @@ ol {
 	}
 
 	.hero__categories__all {
-		padding: 10px 25px 10px 20px;
+		padding: 10px 25px 10px 20px;	
+		
 	}
 
 	.hero__categories ul {
 		position: absolute;
 		padding-left: 20px;
+		padding-right: 20px;
 	}
 
 	.latest-product__slider.owl-carousel .owl-nav {
@@ -3093,7 +3144,7 @@ ol {
 	.humberger__menu__cart ul li a span {
 		height: 13px;
 		width: 13px;
-		background: #4a90e2;
+		background: #63d1cd;
 		font-size: 10px;
 		color: #ffffff;
 		line-height: 13px;
@@ -3173,7 +3224,7 @@ ol {
 		-webkit-border-radius: 0;
 		border-radius: 0;
 		background: transparent;
-		color: #4a90e2;
+		color: #63d1cd;
 	}
 
 	.humberger__menu__wrapper .slicknav_nav .slicknav_row,
@@ -3329,6 +3380,7 @@ ol {
 	.header .container {
 		position: relative;
 	}
+	
 
 	.humberger__menu__wrapper {
 		width: 300px;
@@ -3407,7 +3459,7 @@ ol {
 	.humberger__menu__cart ul li a span {
 		height: 13px;
 		width: 13px;
-		background: #4a90e2;
+		background: #63d1cd;
 		font-size: 10px;
 		color: #ffffff;
 		line-height: 13px;
@@ -3487,7 +3539,7 @@ ol {
 		-webkit-border-radius: 0;
 		border-radius: 0;
 		background: transparent;
-		color: #4a90e2;
+		color: #63d1cd;
 	}
 
 	.humberger__menu__wrapper .slicknav_nav .slicknav_row,
