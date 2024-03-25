@@ -54,7 +54,6 @@ import { ChitietComponent } from './components/admin/chitiet/chitiet.component';
 import { OrderchitietComponent } from './components/client/orderchitiet/orderchitiet.component';
 import { ContactComponent } from './components/client/contact/contact.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,7 +81,6 @@ import { ContactComponent } from './components/client/contact/contact.component'
     ChitietComponent,
     OrderchitietComponent,
     ContactComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -116,5 +114,6 @@ import { ContactComponent } from './components/client/contact/contact.component'
   providers: [],
 
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

@@ -2,9 +2,15 @@
 </p-toast>
 <div id="scrollToTopBtn" (click)="scrollToTop()">
     <img src="assets/image/top.png">
-
 </div>
 
+<head>
+    <meta charset="utf-8">
+    <title>Bán đồ lưu niệm</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
 
 <section>
     <div class="container">
@@ -56,32 +62,30 @@
         <div class="row featured__filter">
             <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let product of listProductNewest">
                 <div class="featured__item">
-                    <div class="featured__item__pic set-bg"
-                        [ngStyle]="{'background-image': 'url(data:image/jpeg;base64,'+ product.images[0].data+')'}">
+                    <div class="featured__item__pic set-bg" style="cursor:pointer"
+                        [ngStyle]="{'background-image': 'url(data:image/jpeg;base64,'+ product.images[0].data+')'}" routerLink="/product/{{product.id}}">
                         <ul class="featured__item__pic__hover">
                             <li>
-                                <a href="javascript:void(0)" (click)="addToWishList(product)">
-                                    <fa-icon [icon]="heart"></fa-icon>
+                                <a href="javascript:void(0)" (click)="addToWishList($event, product)">
+                                    <img src="assets/image/ico/heart.png" alt="">
                                 </a>
                             </li>
                             <li>
                                 <a href="javascript:void(0)" routerLink="/product/{{product.id}}">
-                                    <fa-icon [icon]="eye"></fa-icon>
+                                    <img src="assets/image/ico/eye.png" alt="">
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" (click)="addToCart(product)">
-                                    <fa-icon [icon]="bag"></fa-icon>
+                                <a href="javascript:void(0)" (click)="addToCart($event, product)">
+                                    <img src="assets/image/ico/shopping-bag.png" alt="">
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="featured__item__text">
-                        <h6><b><a href="javascript:void(0)">{{product.name}}</a></b></h6>
+                        <h6><b><a href="javascript:void(0)" routerLink="/product/{{product.id}}">{{product.name}}</a></b></h6>
                         <!-- Hiển thị giá sản phẩm với định dạng tiền tệ VND -->
-                        <h5 class="red-text">{{ product.price | currency:'VND'}}</h5>
-
-
+                        <h5 class="red-text">{{ product.price | currency:'VND' }}</h5>
                     </div>
                 </div>
             </div>
@@ -122,29 +126,28 @@
         <div class="row featured__filter">
             <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let product of listProductPrice">
                 <div class="featured__item">
-                    <div class="featured__item__pic set-bg"
-                        [ngStyle]="{'background-image': 'url(data:image/jpeg;base64,'+ product.images[0].data+')'}">
+                    <div class="featured__item__pic set-bg" style="cursor:pointer"
+                        [ngStyle]="{'background-image': 'url(data:image/jpeg;base64,'+ product.images[0].data+')'}" (click)="goToProduct" routerLink="/product/{{product.id}}">
                         <ul class="featured__item__pic__hover">
                             <li>
-                                <a href="javascript:void(0)" (click)="addToWishList(product)">
-                                    <fa-icon [icon]="heart"></fa-icon>
+                                <a href="javascript:void(0)" (click)="addToWishList($event, product)">
+                                    <img src="assets/image/ico/heart.png" alt="">
                                 </a>
                             </li>
                             <li>
                                 <a href="javascript:void(0)" routerLink="/product/{{product.id}}">
-                                    <fa-icon [icon]="eye"></fa-icon>
-
+                                    <img src="assets/image/ico/eye.png" alt="">
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" (click)="addToCart(product)">
-                                    <fa-icon [icon]="bag"></fa-icon>
+                                <a href="javascript:void(0)" (click)="addToCart($event, product)">
+                                    <img src="assets/image/ico/shopping-bag.png" alt="">
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="featured__item__text">
-                        <h6><b><a href="javascript:void(0)">{{product.name}}</a></b></h6>
+                        <h6><b><a href="javascript:void(0)" routerLink="/product/{{product.id}}">{{product.name}}</a></b></h6>
                         <h5 class="red-text">{{ product.price | currency:'VND'}}</h5>
 
 

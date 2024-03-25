@@ -4,6 +4,7 @@ import { MessageService } from 'primeng/api';
 import { CartService } from 'src/app/_service/cart.service';
 import { ProductService } from 'src/app/_service/product.service';
 import { WishlistService } from 'src/app/_service/wishlist.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,8 +13,8 @@ import { WishlistService } from 'src/app/_service/wishlist.service';
   providers: [MessageService]
 
 })
-export class HomeComponent implements OnInit {
 
+export class HomeComponent implements OnInit {
 
   heart = faHeart;
   bag = faShoppingBag;
@@ -79,7 +80,7 @@ category_items = [
   }
 ] ;
 
-constructor(private productSerive:ProductService,private cartService: CartService, private wishlistService: WishlistService,private messageService: MessageService){}
+constructor(private router: Router, private productSerive:ProductService,private cartService: CartService, private wishlistService: WishlistService,private messageService: MessageService){}
 
 ngOnInit(): void {
   this.getListProduct();
@@ -103,17 +104,23 @@ getListProduct(){
   })
 }
 
-addToCart(item: any){
+addToCart(event: Event, item: any){
   this.cartService.getItems();
   this.showSuccess("Thêm giỏ hàng thành công!")
   this.cartService.addToCart(item,1);
+  event.stopPropagation();
 }
 
-addToWishList(item: any){
+addToWishList(event: Event, item: any){
   if(!this.wishlistService.productInWishList(item)){
     this.showSuccess("Thêm yêu thích thành công!")
     this.wishlistService.addToWishList(item);
+    event.stopPropagation();
   }
+  
+}
+goToProduct(item: any): void {
+  this.router.navigate(['/product', item.id]);
 }
 
 showSuccess(text: string) {
@@ -128,16 +135,10 @@ showWarn(text: string) {
 }
 
 
-  scrollToTop() {
-    const scrollDuration = 1000; // Thời gian để cuộn lên (1 giây)
-    const scrollStep = -window.scrollY / (scrollDuration / 15);
-
-    const scrollInterval = setInterval(function() {
-        if (window.scrollY != 0) {
-            window.scrollBy(0, scrollStep);
-        } else {
-            clearInterval(scrollInterval);
-        }
-    }, 15);
-  }
+scrollToTop() {
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+  });
+}
 }
